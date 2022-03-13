@@ -1,24 +1,41 @@
 {
-  "name": "select2",
-  "description": "Select2 is a jQuery based replacement for select boxes. It supports searching, remote data sets, and infinite scrolling of results.",
-  "main": [
-    "dist/js/select2.js",
-    "src/scss/core.scss"
+  "ignore": [
+    "**/.*",
+    "builder",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
   ],
+  "version": "2.0.1",
+  "name": "Ionicons",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:select2/select2.git"
-  },
-  "homepage": "https://github.com/ivaynberg/select2",
-  "version": "4.0.4",
-  "_release": "4.0.4",
+  "authors": [
+    "Ben Sperry <ben@drifty.com>",
+    "Adam Bradley <adam@drifty.com>",
+    "Max Lynch <max@drifty.com>"
+  ],
+  "keywords": [
+    "fonts",
+    "icon font",
+    "icons",
+    "ionic",
+    "web font"
+  ],
+  "main": [
+    "css/ionicons.css",
+    "fonts/*"
+  ],
+  "homepage": "https://github.com/driftyco/ionicons",
+  "description": "Ionicons - free and beautiful icons from the creators of Ionic Framework",
+  "_release": "2.0.1",
   "_resolution": {
     "type": "version",
-    "tag": "4.0.4",
-    "commit": "16f6b10628f9000918708cef9b3da615119cf6d6"
+    "tag": "v2.0.1",
+    "commit": "ecb4b806831005c25b97ed9089fbb1d7dcc0879c"
   },
-  "_source": "https://github.com/ivaynberg/select2.git",
-  "_target": "^4.0.3",
-  "_originalSource": "select2"
+  "_source": "https://github.com/driftyco/ionicons.git",
+  "_target": "^2.0.1",
+  "_originalSource": "ionicons",
+  "_direct": true
 }

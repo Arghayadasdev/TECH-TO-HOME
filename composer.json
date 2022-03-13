@@ -1,25 +1,69 @@
 {
-  "name": "select2/select2",
-  "description": "Select2 is a jQuery based replacement for select boxes.",
-  "type": "component",
-  "homepage": "https://select2.org/",
-  "license": "MIT",
-  "require": {
-    "robloach/component-installer": "*"
-  },
-  "extra": {
-    "component": {
-      "scripts": [
-        "dist/js/select2.js"
-      ],
-      "styles": [
-        "dist/css/select2.css"
-      ],
-      "files": [
-        "dist/js/select2.js",
-        "dist/js/i18n/*.js",
-        "dist/css/select2.css"
-      ]
+    "name": "components/jqueryui",
+    "type": "component",
+    "description": "jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. Whether you're building highly interactive web applications or you just need to add a date picker to a form control, jQuery UI is the perfect choice.",
+    "license": "MIT",
+    "require": {
+        "components/jquery": ">=1.6"
+    },
+    "authors": [
+        {
+            "name": "jQuery UI Team",
+            "homepage": "http://jqueryui.com/about"
+        },
+        {
+            "name": "Scott Gonzalez",
+            "email": "scott.gonzalez@gmail.com",
+            "homepage": "http://scottgonzalez.com"
+        },
+        {
+            "name": "Joern Zaefferer",
+            "email": "joern.zaefferer@gmail.com",
+            "homepage": "http://bassistance.de"
+        },
+        {
+            "name": "Kris Borchers",
+            "email": "kris.borchers@gmail.com",
+            "homepage": "http://krisborchers.com"
+        },
+        {
+            "name": "Corey Frang",
+            "email": "gnarf37@gmail.com",
+            "homepage": "http://gnarf.net"
+        },
+        {
+            "name": "Mike Sherov",
+            "email": "mike.sherov@gmail.com",
+            "homepage": "http://mike.sherov.com"
+        },
+        {
+            "name": "TJ VanToll",
+            "email": "tj.vantoll@gmail.com",
+            "homepage": "http://tjvantoll.com"
+        },
+        {
+            "name": "Felix Nagel",
+            "email": "info@felixnagel.com",
+            "homepage": "http://www.felixnagel.com"
+        }
+    ],
+    "extra": {
+        "component": {
+            "name": "jquery-ui",
+            "scripts": [
+                "jquery-ui.js"
+            ],
+            "files": [
+                "ui/**",
+                "themes/**",
+                "jquery-ui.min.js"
+            ],
+            "shim": {
+                "deps": [
+                    "jquery"
+                ],
+                "exports": "jQuery"
+            }
+        }
     }
-  }
 }

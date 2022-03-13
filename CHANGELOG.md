@@ -1,254 +1,766 @@
-# Change Log
+Changelog
+=========
 
-## 4.0.4
+### 2.18.1
 
-### New features / Improvements
-- Make tag matching case insensitive [https://github.com/select2/select2/commit/cb9a90457867ffb14c7b1550bb67e872e0a5c2dd, https://github.com/select2/select2/commit/1167bace78cd3b1a918c1b04f3bac54674eab62b]
-- Support selecting options with blank or `0` option values [https://github.com/select2/select2/commit/16b4840c0e2df0461998e3b464ee0a546173950d, https://github.com/select2/select2/commit/0358ee528765157234643d289bce6b8ca5889c72]
+* Release Mar 22, 2017
 
-### Bug fixes
-- Fix issue with entire form losing focus when tabbing away from a Select2 control (#4419)
-- Fix UMD support for CommonJS [https://github.com/select2/select2/commit/45a877345482956021161203ac789c25f40a7d5e]
+* [#3853](https://github.com/moment/moment/pull/3853) [misc] Fix invalid whitespace character causing inability to parse
+  moment.js
 
-### Documentation
-- Github Pages documentation has been deprecated, replaced with https://github.com/select2/docs
-- Add django-autocomplete-light to integrations [https://github.com/select2/select2/pull/4597]
-- Correct typo in options page [https://github.com/select2/select2/pull/4389]
-- Correct misspelling in AJAX query parameters example [https://github.com/select2/select2/pull/4435]
-- "highlight" should be "focus" in focus example [https://github.com/select2/select2/pull/4441]
-- Correct misspelling in `<select>` serialization example [https://github.com/select2/select2/pull/4538]
-- Correct typos in documentation [https://github.com/select2/select2/pull/4663]
+### 2.18.0 [See full changelog](https://gist.github.com/ichernev/78920c5a1e419fb28c6e4546d1b7235c)
 
-### Translations
-- Add `errorLoading` Hungarian translation [https://github.com/select2/select2/commit/7d1d13352321e21670ff1c6cba7413aa264fd57a]
-- Add `errorLoading` German translation [https://github.com/select2/select2/commit/4df965219ea4c39147fde9335bc260840465933a]
-- Add Slovene language [https://github.com/select2/select2/commit/8e6422c570a87da8d89c45daf0d253695a943c84]
-- Add `errorLoading` Galician translation [https://github.com/select2/select2/commit/8fcc6202c37f4e06d951342bf142a3b906b6b8e3]
-- Add `errorLoading` Thai translation [https://github.com/select2/select2/commit/625fc78ee616baedf64aa37357403b4b72c7363c]
-- Add `searching` and `errorLoading` Finnish translations [https://github.com/select2/select2/pull/4730]
-- Add `errorLoading` Turkish translation [https://github.com/select2/select2/commit/fd4a0825315c7055347726d5818c999279f96ff8, https://github.com/select2/select2/commit/751b36767f9f28b9de9428d5e8035c9a404915d9]
-- Add Armenian language [https://github.com/select2/select2/commit/f6fa52dcc02341df1523f50348f2effc54ee2911]
+* Release Mar 18, 2017
 
-## 4.0.3
+## Features
 
-This is the third bugfix release of Select2 4.0.0. It builds upon the [second bugfix release](https://github.com/select2/select2/releases/tag/4.0.2) and fixes many common issues.
+* [#3708](https://github.com/moment/moment/pull/3708) [feature] RFC2822 parsing
+* [#3611](https://github.com/moment/moment/pull/3611) [feature] Durations gain validity
+* [#3738](https://github.com/moment/moment/pull/3738) [feature] Enable relative time for multiple seconds, request [#2558](https://github.com/moment/moment/issues/2558)
+* [#3766](https://github.com/moment/moment/pull/3766) [feature] Add support for k and kk format parsing
 
-### New features / Improvements
-- The old `dropdownAutoWidth` option now properly works [https://github.com/select2/select2/commit/fe26b083eb830836061de1458e483782cefef424]
-- A `focus` event on the original `<select>` is now handled [https://github.com/select2/select2/commit/31e7a1d4c52ed7477769fcad5d15166ae3c9b4d0]
-- Adding and removing options now refreshes the selection automatically [https://github.com/select2/select2/commit/ea79a197e0ffe55aa600eed6d18cbd1c804c3176]
+## Bugfixes
 
-### Bug fixes
-- `select2('option')` no longer mutate the arguments when working on multiple elements [https://github.com/select2/select2/commit/c2c1aeef31c95c6df5545c900a4e1782d712497c]
-- Better detect aborted requests [https://github.com/select2/select2/commit/cfb66f5e4f71a56c46a6890c5dde4b7f24f11fa8]
-- New options are now properly created during tokenization [https://github.com/select2/select2/commit/3b8cd2e36990e695e4cb4b966c8658e7ca1574dc]
-- Fix positioning bug with non-static parents for the dropdown [https://github.com/select2/select2/pull/4267]
-- Infinite scrolling no longer resets the keyboard focus [https://github.com/select2/select2/commit/e897d008a672da262ba84cee2a144578696ada29, https://github.com/select2/select2/commit/9f581285d88128b29a01fc1e5fd2d445d610b553]
-- `selectOnClose` now works properly with `closeOnSelect` [https://github.com/select2/select2/commit/481c43883e23874e9c35879d173eb8cc5b994b12]
-- Apply `ajax.delay` to empty search terms as well [https://github.com/select2/select2/commit/4b9e02f02211248be25ac4c16d4635cf38237bb9]
+* [#3643](https://github.com/moment/moment/pull/3643) [bugfix] Fixes [#3520](https://github.com/moment/moment/issues/3520), parseZone incorrectly handled minutes under 16
+* [#3710](https://github.com/moment/moment/pull/3710) [bugfix] Fixes [#3632](https://github.com/moment/moment/issues/3632), toISOString returns null for invalid date
+* [#3787](https://github.com/moment/moment/pull/3787) [bugfix] Fixes [#3717](https://github.com/moment/moment/issues/3717), ensure day-of-year is non-zero
+* [#3780](https://github.com/moment/moment/pull/3780) [bugfix] Fixes [#3765](https://github.com/moment/moment/issues/3765): Ensure year 0 is formatted with YYYY
+* [#3806](https://github.com/moment/moment/pull/3806) [bugfix] Fixes [#3805](https://github.com/moment/moment/issues/3805), fix locale month getters for standalone/format cases
 
-### Documentation
-- Added example for attaching event listeners [https://github.com/select2/select2/commit/84d6b5d840f7f4e6b7a2fb3f08424bf5495c876d]
-- Correct link to the [Select2 Bootstrap Theme](https://github.com/select2/select2-bootstrap-theme) [https://github.com/select2/select2/pull/4318]
-- Added example for using a `<label>` [https://github.com/select2/select2/commit/3bc7f4ac78b58eff8cd17b3273596638c3c9c5c1]
-- Add documentation for `ajax.url` [https://github.com/select2/select2/commit/5a831afb9a7d46e8f20aec21164cfbfd182024de]
-- Added favicon [https://github.com/select2/select2/pull/4379]
+7 new locales, many locale improvements and some misc changes
 
-### Translations
-- Add Khmer translation [https://github.com/select2/select2/pull/4246]
-- Added Norwegian bokmaal for `errorLoading` [https://github.com/select2/select2/pull/4259]
-- Fixed pluralization in Lithuanian translation [https://github.com/select2/select2/commit/5b5eddd183c87bf43165b3a98e03eabe10e9fa58]
-- Add French translation for `errorLoading` [https://github.com/select2/select2/commit/b1ea28bb7d8c02b3b352f558031ccfc8041122eb]
-- Add Greek translation [https://github.com/select2/select2/pull/4139]
+### 2.17.1 [Also available here](https://gist.github.com/ichernev/f38280b2b29c4932914a6d3a4e50bfb2)
+* Release Dec 03, 2016
 
-## 4.0.2
+* [#3638](https://github.com/moment/moment/pull/3638) [misc] TS: Make typescript definitions work with 1.x
+* [#3628](https://github.com/moment/moment/pull/3628) [misc] Adds "sign CLA" link to `CONTRIBUTING.md`
+* [#3640](https://github.com/moment/moment/pull/3640) [misc] Fix locale issues
 
-This is the second bugfix release of Select2 4.0.0. It builds upon the [first release candidate of Select2 4.0.2](https://github.com/select2/select2/releases/tag/4.0.2-rc.1) with some minor improvements.
+### 2.17.0 [Also available here](https://gist.github.com/ichernev/ed58f76fb95205eeac653d719972b90c)
+* Release Nov 22, 2016
 
-### New features / Improvements
+* [#3435](https://github.com/moment/moment/pull/3435) [new locale] yo: Yoruba (Nigeria) locale
+* [#3595](https://github.com/moment/moment/pull/3595) [bugfix] Fix accidental reference to global "value" variable
+* [#3506](https://github.com/moment/moment/pull/3506) [bugfix] Fix invalid moments returning valid dates to method calls
+* [#3563](https://github.com/moment/moment/pull/3563) [locale] ca: Change future relative time
+* [#3504](https://github.com/moment/moment/pull/3504) [tests] Fixes [#3463](https://github.com/moment/moment/issues/3463), parseZone not handling Z correctly (tests only)
+* [#3591](https://github.com/moment/moment/pull/3591) [misc] typescript: update typescript to 2.0.8, add strictNullChecks=true
+* [#3597](https://github.com/moment/moment/pull/3597) [misc] Fixed capitalization in nuget spec
 
-- Added `insertTag` option to control the placement of the `tags` option [https://github.com/select2/select2/pull/4008]
-- Added handler for AJAX errors [https://github.com/select2/select2/issues/3501]
-- Added insertTag to control the tag position [https://github.com/select2/select2/pull/4008]
+### 2.16.0 [See full changelog](https://gist.github.com/ichernev/17bffc1005a032cb1a8ac4c1558b4994)
+* Release Nov 9, 2016
 
-### Bug fixes
+## Features
+* [#3530](https://github.com/moment/moment/pull/3530) [feature] Check whether input is date before checking if format is array
+* [#3515](https://github.com/moment/moment/pull/3515) [feature] Fix [#2300](https://github.com/moment/moment/issues/2300): Default to current week.
 
-- Fixed positioning issues with static dropdown parents [https://github.com/select2/select2/issues/3970]
-- Fixed existing selections not always being respected with array data [https://github.com/select2/select2/issues/3990]
-- Sanitize automatically generated ids so CSS identifiers can be used [https://github.com/select2/select2/issues/3618]
-- Recursively apply defaults so AJAX defaults can be set [https://github.com/select2/select2/commit/983cd8e765c5345bfe7d3bdcc3b0c882a35461ca]
-- No need to recalculate the top of the dropdown twice [https://github.com/select2/select2/pull/4155]
+## Bugfixes
+* [#3546](https://github.com/moment/moment/pull/3546) [bugfix] Implement lazy-loading of child locales with missing prents
+* [#3523](https://github.com/moment/moment/pull/3523) [bugfix] parseZone should handle UTC
+* [#3502](https://github.com/moment/moment/pull/3502) [bugfix] Fix [#3500](https://github.com/moment/moment/issues/3500): ISO 8601 parsing should match the full string, not the beginning of the string.
+* [#3581](https://github.com/moment/moment/pull/3581) [bugfix] Fix parseZone, redo [#3504](https://github.com/moment/moment/issues/3504), fix [#3463](https://github.com/moment/moment/issues/3463)
 
-### Documentation
+## New Locales
+* [#3416](https://github.com/moment/moment/pull/3416) [new locale] nl-be: Dutch (Belgium) locale
+* [#3393](https://github.com/moment/moment/pull/3393) [new locale] ar-dz: Arabic (Algeria) locale
+* [#3342](https://github.com/moment/moment/pull/3342) [new locale] tet: Tetun Dili (East Timor) locale
 
-- Updated Bootstrap and Font Awesome dependencies [https://github.com/select2/select2/commit/a5e539b509778eabeb8ce79e191b3ee1e81f6deb, https://github.com/select2/select2/commit/81a4a68b113e0d3e0fb1d0f8b1c33ae1b48ba04f, https://github.com/select2/select2/commit/6369f5f173fb81ec692213782945cc737e248da5]
-- Use Jekyll's highlighting instead of prettify [https://github.com/select2/select2/commit/54441e6a22be3969dd934ccb769f5d7dde684bfb, https://github.com/select2/select2/commit/74387b98632c75b06d15d83ad5359b9daf0f5dcb, https://github.com/select2/select2/commit/a126b53b4c90fac33b5d855894647cd8bcac3558, https://github.com/select2/select2/commit/75163d67cb80e4279965a97e9eeda5b171806085]
-- Corrected responsive width example to properly show it working [https://github.com/select2/select2/commit/63d531a9c0ab51f05327492a56f3245777762b45]
-- Replaced protocol-relative URLs with HTTPS protocol [https://github.com/select2/select2/pull/4127]
-- Code snippets for mapping `id` and `text` [https://github.com/select2/select2/issues/4086]
-- Document how to trigger `change` just for Select2 [https://github.com/select2/select2/issues/3620]
-- Added notes about DOM events [https://github.com/select2/select2/commit/37dbe059fce4578b46b7561e6243b7fdc63ac002]
+And more locale, build and typescript improvements
 
-### Translations
-- Correct Romanian translation [https://github.com/select2/select2/commit/72d905f9e026d49e7c600f37a1ce742c404654d7]
+### 2.15.2
+* Release Oct 23, 2016
+* [#3525](https://github.com/moment/moment/pull/3525) Speedup month standalone/format regexes **(IMPORTANT)**
+* [#3466](https://github.com/moment/moment/pull/3466) Fix typo of Javanese
 
-## 4.0.1
+### 2.15.1
+* Release Sept 20, 2016
+* [#3438](https://github.com/moment/moment/pull/3438) Fix locale autoload, revert [#3344](https://github.com/moment/moment/pull/3344)
 
-This is the first bugfix release of Select2 4.0.0. It builds upon the [first release candidate of Select2 4.0.1](https://github.com/select2/select2/releases/tag/4.0.1-rc.1) with some minor improvements.
+### 2.15.0 [See full changelog](https://gist.github.com/ichernev/10e1c5bf647545c72ca30e9628a09ed3)
+- Release Sept 12, 2016
 
-### New features / improvements
-- The option container is now passed in as the second argument when templating selections using `templateResult` [https://github.com/select2/select2/commit/dc516e7073605723be59bc727b96a3b3dea1ae5a]
-- The option container is now passed in as the second argument when templating selections using `templateSelection` [https://github.com/select2/select2/pull/3324]
-- You can immediately start typing to search when tabbing into a multiple select [https://github.com/select2/select2/commit/02cca7baa7b78e73cdcf393172ee3a54be387167, https://github.com/select2/select2/commit/79cdcc0956e242c1ce642bbaa93e538c54f4be0]
-- All parameters passed in for AJAX requests are now set as query string parameters by default [https://github.com/select2/select2/issues/3548]
+## New Locales
+* [#3255](https://github.com/moment/moment/pull/3255) [new locale] mi: Maori language
+* [#3267](https://github.com/moment/moment/pull/3267) [new locale] ar-ly: Arabic (Libya) locale
+* [#3333](https://github.com/moment/moment/pull/3333) [new locale] zh-hk: Chinese (Hong Kong) locale
 
-### Bug fixes
-- The search box will now be properly sized after removing a selection [https://github.com/select2/select2/commit/5f80c5d9f81f3c5398c3e6e3e84fd6c67c8873f1]
-- Dropdown results will now be spoken by screen readers [https://github.com/select2/select2/commit/9fae3d74e373fc646da4e39a0c2ab11efa808c3f]
-- Options are now properly cloned when initializing multiple instances at once [https://github.com/select2/select2/commit/3c8366e8769233a6b20ade934fe629279e7be6ff]
-- `selectOnClose` and now be used with `closeOnSelect` without getting a stack overflow [https://github.com/select2/select2/commit/393ca4cf7f7f7097d3a994bda3dbf195e945eba1]
-- Fixed positioning with non-static parents [https://github.com/select2/select2/commit/c9216b4b966653dd63a67e815b47899ef5325298]
-- Fixed bug where multiple selects with placeholders were buggy in IE [https://github.com/select2/select2/issues/3300]
-- Fixed bug where AJAX selects could not be initialized with array data [https://github.com/select2/select2/pull/3375]
-- `:all:` is now correctly removed when used in `containerCss` and `dropdownCss` options [https://github.com/select2/select2/pull/3464]
-- Fixed bug where the multiple select search box would appear on the left in RTL mode [https://github.com/select2/select2/pull/3502]
-- Change ALT + UP to close the dropdown instead of opening it [https://github.com/select2/select2/commit/d2346cc33186c2a00fa2dad29e8e559c42bfea00]
-- Fix focus issue with the multiple select search box when the `change` event was triggered [https://github.com/select2/select2/commit/698fe7b9e187e182f679aa679eb8b0ecb64a846b, https://github.com/select2/select2/commit/88503d2c67dc7f4fb9395a17f17edfe4948cf738, https://github.com/select2/select2/commit/dd2990adead92593a2dffff6ae004ea8b647d130]
-- Fix bug in `ArrayAdapter` where the existing `<option>` data would be used instead of the array data [https://github.com/select2/select2/pull/3565]
-- Remove random call to `$dropdownContainer.width()` in the `AttachBody` decorator [https://github.com/select2/select2/pull/3654]
-- Fix memory leak in `AttachBody` decorator [https://github.com/select2/select2/commit/671f5a2ce21005090e0b69059799cd3dd1fbbf84]
-- Selections can no longer be removed when Select2 is in a disabled state [https://github.com/select2/select2/commit/68d068f1d2c7722d011d285a291d1f974bf09772, https://github.com/select2/select2/commit/7d8f86cbf85ebd2179195ff6a2a7a1c5dcb9da58]
-- Remove redundant `open` event trigger [https://github.com/select2/select2/pull/3507]
-- Correct references to `this` in `ajax.data` and `ajax.url` callback functions [https://github.com/select2/select2/issues/3361]
-- Apply select2('option') calls on all elements [https://github.com/select2/select2/pull/3495]
+## Bugfixes
+* [#3276](https://github.com/moment/moment/pull/3276) [bugfix] duration: parser: Support ms durations in .NET syntax
+* [#3312](https://github.com/moment/moment/pull/3312) [bugfix] locales: Enable locale-data getters without moment (fixes [#3284](https://github.com/moment/moment/issues/3284))
+* [#3381](https://github.com/moment/moment/pull/3381) [bugfix] parsing: Fix parseZone without timezone in string, fixes [#3083](https://github.com/moment/moment/issues/3083)
+* [#3383](https://github.com/moment/moment/pull/3383) [bugfix] toJSON: Fix isValid so that toJSON works after a moment is frozen
+* [#3427](https://github.com/moment/moment/pull/3427) [bugfix] ie8: Fix IE8 (regression in 2.14.x)
 
-### Design
+## Packaging
+* [#3299](https://github.com/moment/moment/pull/3299) [pkg] npm: Do not include .npmignore in npm package
+* [#3273](https://github.com/moment/moment/pull/3273) [pkg] jspm: Include moment.d.ts file in package
+* [#3344](https://github.com/moment/moment/pull/3344) [pkg] exports: use module.require for nodejs
 
-- Fixed original `<select>` not always being hidden correctly in some cases [https://github.com/select2/select2/pull/3301]
-- Fix potential issue with Bootstrap's gradients in Internet Explorer [https://github.com/select2/select2/pull/3307]
-- Improve compatibility with Zurb Foundation [https://github.com/select2/select2/pull/3290]
-- Remove padding on mobile safari search field in multiple selects [https://github.com/select2/select2/pull/3605]
-- Fix the clear button appearing beneath long text [https://github.com/select2/select2/issues/3306]
-- Migrate the CSS classes for the "Loading more results" message to BEM [https://github.com/select2/select2/issues/3889]
-- Fix inline search not displaying properly in Safari [https://github.com/select2/select2/issues/3459]
+Also some locale and typescript improvements
 
-### Documentation
-
-- New documentation theme designed by @fk [https://github.com/select2/select2/pull/3376, https://github.com/select2/select2/pull/3467, https://github.com/select2/select2/pull/3488]
-- Update ajax example to reflect pagination [https://github.com/select2/select2/pull/3357]
-- Fix incorrect option name in `maxiumSelectionLength` example [https://github.com/select2/select2/pull/3454]
-- Fix typos in the disabled mode/results examples [https://github.com/select2/select2/pull/3665]
-- Fix `Option` parameters in the 4.0 announcement [https://github.com/select2/select2/pull/3547]
-- Fix invalid JSON in the tags example within the 4.0 announcement [https://github.com/select2/select2/pull/3637]
-
-### Translations
-- Added Cyrillic variant of the Serbian language [https://github.com/select2/select2/pull/3943]
-- Corrected Thai "no results found" translation [https://github.com/select2/select2/pull/3782]
-- Swapped the `inputTooLong` and `inputTooShort` messages in the Galician translation [https://github.com/select2/select2/pull/3291]
-- Fix improper grammar in Dutch translation [https://github.com/select2/select2/pull/3692]
-- Add Japanese translation [https://github.com/select2/select2/pull/3477]
-- Polish translation: Fixed typo in maximum selected message [https://github.com/select2/select2/pull/3587]
-- Add Malay translation [https://github.com/select2/select2/pull/3635]
-- Add `errorLoading` for Indonesian translation [https://github.com/select2/select2/pull/3635]
-- Correct grammar issues in Hebrew translation [https://github.com/select2/select2/pull/3911]
-- Add `errorLoading` for Danish translation [https://github.com/select2/select2/pull/3870]
-- Add Arabic translation [https://github.com/select2/select2/pull/3859]
-
-## 4.0.0
+### 2.14.1
+- Release July 20, 2016
+* [#3280](https://github.com/moment/moment/pull/3280) Fix typescript definitions
 
 
-This builds upon [the second release candidate](https://github.com/select2/select2/tree/4.0.0-rc.2), **so review all previous release notes** before upgrading from previous versions of Select2.
+### 2.14.0 [See full changelog](https://gist.github.com/ichernev/812e79ac36a7829a22598fe964bfc18a)
 
-### Supported environments
-- jQuery 1.7.2+
-- Modern browsers (Chrome, Firefox, Safari)
-- Internet Explorer 8+
+- Release July 20, 2016
 
-### New features
-- Fully compatible with AMD and UMD based loaders.
-- Advanced plugin system that [uses custom adapters](https://select2.org/advanced/adapters-and-decorators).
-- Full support for `jQuery.noConflict`.
-- A `<select>` is the recommended element and [can be used for all options](https://select2.org/upgrading/migrating-from-35#no-more-hidden-input-tags).  There is limited backwards-compatible support for the `<input>` element in [full builds](https://select2.org/getting-started/builds-and-modules).
-- [Declarative configuration through `data-*` attributes](https://select2.org/configuration/data-attributes)
-- Easy to configure theme system and new default theme
-- You can use more specific locales (like `en-US`) and Select2 will be able to determine what translation files to load.
+## New Features
+* [#3233](https://github.com/moment/moment/pull/3233) Introduce month.isFormat for format/standalone discovery
+* [#2848](https://github.com/moment/moment/pull/2848) Allow user to get/set the rounding method used when calculating relative time
+* [#3112](https://github.com/moment/moment/pull/3112) optimize configFromStringAndFormat
+* [#3147](https://github.com/moment/moment/pull/3147) Call calendar format function with moment context
+* [#3160](https://github.com/moment/moment/pull/3160) deprecate isDSTShifted
+* [#3175](https://github.com/moment/moment/pull/3175) make moment calendar extensible with ad-hoc options
+* [#3191](https://github.com/moment/moment/pull/3191) toDate returns a copy of the internal date object
+* [#3192](https://github.com/moment/moment/pull/3192) Adding support for rollup import.
+* [#3238](https://github.com/moment/moment/pull/3238) Handle empty object and empty array for creation as now
+* [#3082](https://github.com/moment/moment/pull/3082) Use relative AMD moment dependency
 
-### Breaking changes
-- Select2 now uses the MIT license
-- [The full build](https://select2.org/getting-started/builds-and-modules) of Select2 no longer includes jQuery - You must include jQuery separately on your page.
-- Select2 will prevent the inner scrolling of modals (and other scrollable containers) when it is open to prevent the UI from breaking. [Read more at the commit.](https://github.com/select2/select2/commit/003d6053a9fff587c688008397e7d5824463fe99)
-- jQuery is no longer listed as a dependency in the `bower.json`/`component.json` files.
-- [`<select>` has replaced `<input type="hidden" />`](https://select2.org/upgrading/migrating-from-35#no-more-hidden-input-tags) for **all options** (_including remote data_)
-- The [`matcher` has been revamped](https://select2.org/upgrading/migrating-from-35#advanced-matching-of-searches) to include full context, a compatibility module (`select2/compat/matcher`) has been created
-- The [display always reflects the order](https://select2.org/upgrading/migrating-from-35#display-reflects-the-actual-order-of-the-values) data is sent to the server
-- The click mask is no longer the default (again). You can get back the old functionality by wrapping your `selectionAdapter` with the `ClickMask` (`select2/selection/clickMask`) decorator.
-- Select2 no longer stops the propagation of events happening within the dropdown and selection. You can use the `StopPropagation` modules available in the [full builds](https://select2.org/getting-started/builds-and-modules) to prevent this. [https://github.com/select2/select2/commit/8f8140e3b00c5d5bb232455137c4c633d7da4275]
-- The enter key no longer toggles the state of multiple select items in the results, but instead will only select them. Use CTRL + Space instead to toggle the state. [https://github.com/select2/select2/commit/017c20109471fa5b835603faf5dc37f7c2c2ea45]
-- Warnings will now be triggered in the developer console if Select2 detects an unsupported configuration.
+## Bugfixes
+* [#3241](https://github.com/moment/moment/pull/3241) Escape all 24 mixed pieces, not only first 12 in computeMonthsParse
+* [#3008](https://github.com/moment/moment/pull/3008) Object setter orders sets based on size of unit
+* [#3177](https://github.com/moment/moment/pull/3177) Bug Fix [#2704](https://github.com/moment/moment/pull/2704) - isoWeekday(String) inconsistent with isoWeekday(Number)
+* [#3230](https://github.com/moment/moment/pull/3230) fix passing date with format string to ignore format string
+* [#3232](https://github.com/moment/moment/pull/3232) Fix negative 0 in certain diff cases
+* [#3235](https://github.com/moment/moment/pull/3235) Use proper locale inheritance for the base locale, fixes [#3137](https://github.com/moment/moment/pull/3137)
 
-#### Options
+Plus es-do locale and locale bugfixes
 
-- The default value of the `width` option has been changed from `style` to `resolve`.
-- The `copy` value for the `width` option has been renamed to `style`.
+### 2.13.0 [See full changelog](https://gist.github.com/ichernev/0132fcf5b61f7fc140b0bb0090480d49)
+- Release April 18, 2016
 
-##### Renamed
-- `formatSelection` -> `templateSelection`
-- `formatResult` -> `templateResult`
-- `sortResults` -> `sorter`
-- `createSearchChoice` -> `createTag`
-- `selectOnBlur` -> `selectOnClose`
-- `ajax.jsonpCallback` -> `ajax.jsonp`
-- `ajax.results` -> `ajax.processResults`
-- `tags: [array,of,data]` -> `data: [array,of,data], tags: true`
-- `placeholderOption` has been replaced by `placeholder.id` (`placeholder` -> `placeholder.text`)
+## Enhancements:
+* [#2982](https://github.com/moment/moment/pull/2982) Add 'date' as alias to 'day' for startOf() and endOf().
+* [#2955](https://github.com/moment/moment/pull/2955) Add parsing negative components in durations when ISO 8601
+* [#2991](https://github.com/moment/moment/pull/2991) isBetween support for both open and closed intervals
+* [#3105](https://github.com/moment/moment/pull/3105) Add localeSorted argument to weekday listers
+* [#3102](https://github.com/moment/moment/pull/3102) Add k and kk formatting tokens
 
-##### [Internationalization](https://select2.org/i18n)
-- `formatNoMatches` -> `language.noMatches`
-- `formatSearching` -> `language.searching`
-- `formatInputTooShort` -> `language.inputTooShort`
-- `formatInputTooLong` -> `language.inputTooLong`
-- `formatAjaxError` -> `language.errorLoading`
-- `formatLoading` -> `language.loadingMore`
-- `formatSelectionTooBig` -> `language.maximumSelected`
+## Bugfixes
+* [#3109](https://github.com/moment/moment/pull/3109) Fix [#1756](https://github.com/moment/moment/issues/1756) Resolved thread-safe issue on server side.
+* [#3078](https://github.com/moment/moment/pull/3078) Fix parsing for months/weekdays with weird characters
+* [#3098](https://github.com/moment/moment/pull/3098) Use Z suffix when in UTC mode ([#3020](https://github.com/moment/moment/issues/3020))
+* [#2995](https://github.com/moment/moment/pull/2995) Fix floating point rounding errors in durations
+* [#3059](https://github.com/moment/moment/pull/3059) fix bug where diff returns -0 in month-related diffs
+* [#3045](https://github.com/moment/moment/pull/3045) Fix mistaking any input for 'a' token
+* [#2877](https://github.com/moment/moment/pull/2877) Use explicit .valueOf() calls instead of coercion
+* [#3036](https://github.com/moment/moment/pull/3036) Year setter should keep time when DST changes
 
-##### Deprecated/Removed
-- `initSelection` - This is [no longer needed](https://select2.org/upgrading/migrating-from-35#removed-the-requirement-of-initselection) with `<select>` tags.  Limited backwards compatibility in the [full build](https://select2.org/getting-started/builds-and-modules).
-- `id` - Data objects should now always have `id` and `text` attributes that are strings, use [`$.map`](https://api.jquery.com/jquery.map/) when migrating
-- `query` - Use a [custom data adapter](https://select2.org/upgrading/migrating-from-35#custom-data-adapters-instead-of-query) instead.  Limited backwards compatibility in the [full build](https://select2.org/getting-started/builds-and-modules).
-- `ajax.params` - All parameters passed to `ajax` will be passed to the AJAX data transport function
+Plus 3 new locales and locale fixes.
 
-#### Methods
+### 2.12.0 [See full changelog](https://gist.github.com/ichernev/6e5bfdf8d6522fc4ac73)
 
-##### Renamed
-- `.select2("val", [value])` -> `.val([value])`
-- `.select2("enable", !disabled)` -> `.prop("disabled", disabled)`
+- Release March 7, 2016
 
-##### Removed
-- `.select2("onSortStart")` and `.select2("onSortEnd")` - A custom [selection adapter](https://select2.org/advanced/default-adapters/selection) should be created instead
-- `.select2("data", data)` - Create the `<option>` tags for the objects that you would like to set, and set the `.val` to select them
-- `.select2("readonly")` - There is [no way to make a `<select>` element read-only](http://stackoverflow.com/q/368813/359284), disable it instead
+## Enhancements:
+* [#2932](https://github.com/moment/moment/pull/2932) List loaded locales
+* [#2818](https://github.com/moment/moment/pull/2818) Parse ISO-8061 duration containing both day and week values
+* [#2774](https://github.com/moment/moment/pull/2774) Implement locale inheritance and locale updating
 
-#### Events
+## Bugfixes:
+* [#2970](https://github.com/moment/moment/pull/2970) change add subtract to handle decimal values by rounding
+* [#2887](https://github.com/moment/moment/pull/2887) Fix toJSON casting of invalid moment
+* [#2897](https://github.com/moment/moment/pull/2897) parse string arguments for month() correctly, closes #2884
+* [#2946](https://github.com/moment/moment/pull/2946) Fix usage suggestions for min and max
 
-##### New
-- `select2:closing` is triggered before the dropdown is closed
-- `select2:select` is triggered when an option is selected
+## New locales:
+* [#2917](https://github.com/moment/moment/pull/2917) Locale Punjabi(Gurmukhi) India format conversion
 
-##### Renamed
-- `select2-close` is now `select2:close`
-- `select2-open` is now `select2:open`
-- `select2-opening` is now `select2:opening`
-- `select2-selecting` is now `select2:selecting`
-- `select2-removed` is now `select2:unselect`
-- `select2-removing` is now `select2:unselecting`
+And more
 
-##### Removed
-- `select2-clearing` has been removed in favor of `select2:unselecting`
-- `select2-highlight`
-- `select2-loaded`
-- `select2-focus` - Use the native `focus` event instead
-- `select2-blur` - Use the native `blur` event instead
-- All extra properties from the `change` event were removed
-  - `val` can be retrieved with `$element.val()` instead
-  - `added` can be retrieved by listening to `select2:select`
-  - `removed` can be retrieved by listening to `select2:unselect`
+### 2.11.2 (Fix ReDoS attack vector)
+
+- Release February 7, 2016
+
+* [#2939](https://github.com/moment/moment/pull/2939) use full-string match to speed up aspnet regex match
+
+### 2.11.1 [See full changelog](https://gist.github.com/ichernev/8ec3ee25b749b4cff3c2)
+
+- Release January 9, 2016
+
+## Bugfixes:
+* [#2881](https://github.com/moment/moment/pull/2881) Revert "Merge pull request #2746 from mbad0la:develop" Sep->Sept
+* [#2868](https://github.com/moment/moment/pull/2868) Add format and parse token Y, so it actually works
+* [#2865](https://github.com/moment/moment/pull/2865) Use typeof checks for undefined for global variables
+* [#2858](https://github.com/moment/moment/pull/2858) Fix Date mocking regression introduced in 2.11.0
+* [#2864](https://github.com/moment/moment/pull/2864) Include changelog in npm release
+* [#2830](https://github.com/moment/moment/pull/2830) dep: add grunt-cli
+* [#2869](https://github.com/moment/moment/pull/2869) Fix months parsing for some locales
+
+### 2.11.0 [See full changelog](https://gist.github.com/ichernev/6594bc29719dde6b2f66)
+
+- Release January 4, 2016
+
+* [#2624](https://github.com/moment/moment/pull/2624) Proper handling of invalid moments
+* [#2634](https://github.com/moment/moment/pull/2634) Fix strict month parsing issue in cs,ru,sk
+* [#2735](https://github.com/moment/moment/pull/2735) Reset the locale back to 'en' after defining all locales in min/locales.js
+* [#2702](https://github.com/moment/moment/pull/2702) Week rework
+* [#2746](https://github.com/moment/moment/pull/2746) Changed September Abbreviation to "Sept" in locale-specific english
+  files and default locale file
+* [#2646](https://github.com/moment/moment/pull/2646) Fix [#2645](https://github.com/moment/moment/pull/2645) - invalid dates pre-1970
+
+* [#2641](https://github.com/moment/moment/pull/2641) Implement basic format and comma as ms separator in ISO 8601
+* [#2665](https://github.com/moment/moment/pull/2665) Implement stricter weekday parsing
+* [#2700](https://github.com/moment/moment/pull/2700) Add [Hh]mm and [Hh]mmss formatting tokens, so you can parse 123 with
+  hmm for example
+* [#2565](https://github.com/moment/moment/pull/2565) [#2835](https://github.com/moment/moment/pull/2835) Expose arguments used for moment creation with creationData
+  (fix [#2443](https://github.com/moment/moment/pull/2443))
+* [#2648](https://github.com/moment/moment/pull/2648) fix issue [#2640](https://github.com/moment/moment/pull/2640): support instanceof operator
+* [#2709](https://github.com/moment/moment/pull/2709) Add isSameOrAfter and isSameOrBefore comparison methods
+* [#2721](https://github.com/moment/moment/pull/2721) Fix moment creation from object with strings values
+* [#2740](https://github.com/moment/moment/pull/2740) Enable 'd hh:mm:ss.sss' format for durations
+* [#2766](https://github.com/moment/moment/pull/2766) [#2833](https://github.com/moment/moment/pull/2833) Alternate Clock Source Support
+
+### 2.10.6
+
+- Release July 28, 2015
+
+[#2515](https://github.com/moment/moment/pull/2515) Fix regression introduced
+in `2.10.5` related to `moment.ISO_8601` parsing.
+
+### 2.10.5 [See full changelog](https://gist.github.com/ichernev/6ec13ac7efc396da44b2)
+
+- Release July 26, 2015
+
+Important changes:
+* [#2357](https://github.com/moment/moment/pull/2357) Improve unit bubbling for ISO dates
+  this fixes day to year conversions to work around end-of-year (~365 days). As
+  a side effect 365 days is 11 months and 30 days, and 366 days is one year.
+* [#2438](https://github.com/moment/moment/pull/2438) Fix inconsistent moment.min and moment.max results
+  Return invalid result if any of the inputs is invalid
+* [#2494](https://github.com/moment/moment/pull/2494) Fix two digit year parsing with YYYY format
+  This brings the benefits of YY to YYYY
+* [#2368](https://github.com/moment/moment/pull/2368) perf: use faster form of copying dates, across the board improvement
+
+
+### 2.10.3 [See full changelog](https://gist.github.com/ichernev/f264b9bed5b00f8b1b7f)
+
+- Release May 13, 2015
+
+* add `moment.fn.to` and `moment.fn.toNow` (similar to `from` and `fromNow`)
+* new locales (Sinhalese (si), Montenegrin (me), Javanese (ja))
+* performance improvements
+
+### 2.10.2
+
+- Release April 9, 2015
+
+* fixed moment-with-locales in browser env caused by esperanto change
+
+### 2.10.1
+
+* regression: Add moment.duration.fn back
+
+### 2.10.0
+
+Ported code to es6 modules.
+
+### 2.9.0 [See full changelog](https://gist.github.com/ichernev/0c9a9b49951111a27ce7)
+
+- Release January 8, 2015
+
+languages:
+* [2104](https://github.com/moment/moment/issues/2104) Frisian (fy) language file with unit test
+* [2097](https://github.com/moment/moment/issues/2097) add ar-tn locale
+
+deprecations:
+* [2074](https://github.com/moment/moment/issues/2074) Implement `moment.fn.utcOffset`, deprecate `moment.fn.zone`
+
+features:
+* [2088](https://github.com/moment/moment/issues/2088) add moment.fn.isBetween
+* [2054](https://github.com/moment/moment/issues/2054) Call updateOffset when creating moment (needed for default timezone in
+  moment-timezone)
+* [1893](https://github.com/moment/moment/issues/1893) Add moment.isDate method
+* [1825](https://github.com/moment/moment/issues/1825) Implement toJSON function on Duration
+* [1809](https://github.com/moment/moment/issues/1809) Allowing moment.set() to accept a hash of units
+* [2128](https://github.com/moment/moment/issues/2128) Add firstDayOfWeek, firstDayOfYear locale getters
+* [2131](https://github.com/moment/moment/issues/2131) Add quarter diff support
+
+Some bugfixes and language improvements -- [full changelog](https://gist.github.com/ichernev/0c9a9b49951111a27ce7)
+
+### 2.8.4 [See full changelog](https://gist.github.com/ichernev/a4fcb0a46d74e4b9b996)
+
+- Release November 19, 2014
+
+Features:
+
+* [#2000](https://github.com/moment/moment/issues/2000) Add LTS localised format that includes seconds
+* [#1960](https://github.com/moment/moment/issues/1960) added formatToken 'x' for unix offset in milliseconds #1938
+* [#1965](https://github.com/moment/moment/issues/1965) Support 24:00:00.000 to mean next day, at midnight.
+* [#2002](https://github.com/moment/moment/issues/2002) Accept 'date' key when creating moment with object
+* [#2009](https://github.com/moment/moment/issues/2009) Use native toISOString when we can
+
+Some bugfixes and language improvements -- [full changelog](https://gist.github.com/ichernev/a4fcb0a46d74e4b9b996)
+
+### 2.8.3
+
+- Release September 5, 2014
+
+Bugfixes:
+
+* [#1801](https://github.com/moment/moment/issues/1801) proper pluralization for Arabic
+* [#1833](https://github.com/moment/moment/issues/1833) improve spm integration
+* [#1871](https://github.com/moment/moment/issues/1871) fix zone bug caused by Firefox 24
+* [#1882](https://github.com/moment/moment/issues/1882) Use hh:mm in Czech
+* [#1883](https://github.com/moment/moment/issues/1883) Fix 2.8.0 regression in duration as conversions
+* [#1890](https://github.com/moment/moment/issues/1890) Faster travis builds
+* [#1892](https://github.com/moment/moment/issues/1892) Faster isBefore/After/Same
+* [#1848](https://github.com/moment/moment/issues/1848) Fix flaky month diffs
+* [#1895](https://github.com/moment/moment/issues/1895) Fix 2.8.0 regression in moment.utc with format array
+* [#1896](https://github.com/moment/moment/issues/1896) Support setting invalid instance locale (noop)
+* [#1897](https://github.com/moment/moment/issues/1897) Support moment([str]) in addition to moment([int])
+
+### 2.8.2
+
+- Release August 22, 2014
+
+Minor bugfixes:
+
+* [#1874](https://github.com/moment/moment/issues/1874) use `Object.prototype.hasOwnProperty`
+  instead of `obj.hasOwnProperty` (ie8 bug)
+* [#1873](https://github.com/moment/moment/issues/1873) add `duration#toString()`
+* [#1859](https://github.com/moment/moment/issues/1859) better month/weekday names in norwegian
+* [#1812](https://github.com/moment/moment/issues/1812) meridiem parsing for greek
+* [#1804](https://github.com/moment/moment/issues/1804) spanish del -> de
+* [#1800](https://github.com/moment/moment/issues/1800) korean LT improvement
+
+### 2.8.1
+
+- Release August 1, 2014
+
+* bugfix [#1813](https://github.com/moment/moment/issues/1813): fix moment().lang([key]) incompatibility
+
+### 2.8.0 [See changelog](https://gist.github.com/ichernev/ac3899324a5fa6c8c9b4)
+
+- Release July 31, 2014
+
+* incompatible changes
+    * [#1761](https://github.com/moment/moment/issues/1761): moments created without a language are no longer following the global language, in case it changes. Only newly created moments take the global language by default. In case you're affected by this, wait, comment on [#1797](https://github.com/moment/moment/issues/1797) and wait for a proper reimplementation
+    * [#1642](https://github.com/moment/moment/issues/1642): 45 days is no longer "a month" according to humanize, cutoffs for month, and year have changed. Hopefully your code does not depend on a particular answer from humanize (which it shouldn't anyway)
+    * [#1784](https://github.com/moment/moment/issues/1784): if you use the human readable English datetime format in a weird way (like storing them in a database) that would break when the format changes you're at risk.
+
+* deprecations (old behavior will be dropped in 3.0)
+    * [#1761](https://github.com/moment/moment/issues/1761) `lang` is renamed to `locale`, `langData` -> `localeData`. Also there is now `defineLocale` that should be used when creating new locales
+    * [#1763](https://github.com/moment/moment/issues/1763) `add(unit, value)` and `subtract(unit, value)` are now deprecated. Use `add(value, unit)` and `subtract(value, unit)` instead.
+    * [#1759](https://github.com/moment/moment/issues/1759) rename `duration.toIsoString` to `duration.toISOString`. The js standard library and moment's `toISOString` follow that convention.
+
+* new locales
+    * [#1789](https://github.com/moment/moment/issues/1789) Tibetan (bo)
+    * [#1786](https://github.com/moment/moment/issues/1786) Africaans (af)
+    * [#1778](https://github.com/moment/moment/issues/1778) Burmese (my)
+    * [#1727](https://github.com/moment/moment/issues/1727) Belarusian (be)
+
+* bugfixes, locale bugfixes, performance improvements, features
+
+### 2.7.0 [See changelog](https://gist.github.com/ichernev/b0a3d456d5a84c9901d7)
+
+- Release June 12, 2014
+
+* new languages
+
+  * [#1678](https://github.com/moment/moment/issues/1678) Bengali (bn)
+  * [#1628](https://github.com/moment/moment/issues/1628) Azerbaijani (az)
+  * [#1633](https://github.com/moment/moment/issues/1633) Arabic, Saudi Arabia (ar-sa)
+  * [#1648](https://github.com/moment/moment/issues/1648) Austrian German (de-at)
+
+* features
+
+  * [#1663](https://github.com/moment/moment/issues/1663) configurable relative time thresholds
+  * [#1554](https://github.com/moment/moment/issues/1554) support anchor time in moment.calendar
+  * [#1693](https://github.com/moment/moment/issues/1693) support moment.ISO_8601 as parsing format
+  * [#1637](https://github.com/moment/moment/issues/1637) add moment.min and moment.max and deprecate min/max instance methods
+  * [#1704](https://github.com/moment/moment/issues/1704) support string value in add/subtract
+  * [#1647](https://github.com/moment/moment/issues/1647) add spm support (package manager)
+
+* bugfixes
+
+### 2.6.0 [See changelog](https://gist.github.com/ichernev/10544682)
+
+- Release April 12 , 2014
+
+* languages
+  * [#1529](https://github.com/moment/moment/issues/1529) Serbian-Cyrillic (sr-cyr)
+  * [#1544](https://github.com/moment/moment/issues/1544), [#1546](https://github.com/moment/moment/issues/1546) Khmer Cambodia (km)
+
+* features
+    * [#1419](https://github.com/moment/moment/issues/1419), [#1468](https://github.com/moment/moment/issues/1468), [#1467](https://github.com/moment/moment/issues/1467), [#1546](https://github.com/moment/moment/issues/1546) better handling of timezone-d moments around DST
+    * [#1462](https://github.com/moment/moment/issues/1462) add weeksInYear and isoWeeksInYear
+    * [#1475](https://github.com/moment/moment/issues/1475) support ordinal parsing
+    * [#1499](https://github.com/moment/moment/issues/1499) composer support
+    * [#1577](https://github.com/moment/moment/issues/1577), [#1604](https://github.com/moment/moment/issues/1604) put Date parsing in moment.createFromInputFallback so it can be properly deprecated and controlled in the future
+    * [#1545](https://github.com/moment/moment/issues/1545) extract two-digit year parsing in moment.parseTwoDigitYear, so it can be overwritten
+    * [#1590](https://github.com/moment/moment/issues/1590) (see [#1574](https://github.com/moment/moment/issues/1574)) set AMD global before module definition to better support non AMD module dependencies used in AMD environment
+    * [#1589](https://github.com/moment/moment/issues/1589) remove global in Node.JS environment (was not working before, nobody complained, was scheduled for removal anyway)
+    * [#1586](https://github.com/moment/moment/issues/1586) support quarter setting and parsing
+
+* 18 bugs fixed
+
+### 2.5.1
+
+- Release January 22, 2014
+
+* languages
+  * [#1392](https://github.com/moment/moment/issues/1392) Armenian (hy-am)
+
+* bugfixes
+  * [#1429](https://github.com/moment/moment/issues/1429) fixes [#1423](https://github.com/moment/moment/issues/1423) weird chrome-32 bug with js object creation
+  * [#1421](https://github.com/moment/moment/issues/1421) remove html entities from Welsh
+  * [#1418](https://github.com/moment/moment/issues/1418) fixes [#1401](https://github.com/moment/moment/issues/1401) improved non-padded tokens in strict matching
+  * [#1417](https://github.com/moment/moment/issues/1417) fixes [#1404](https://github.com/moment/moment/issues/1404) handle buggy moment object created by property cloning
+  * [#1398](https://github.com/moment/moment/issues/1398) fixes [#1397](https://github.com/moment/moment/issues/1397) fix Arabic-like week number parsing
+  * [#1396](https://github.com/moment/moment/issues/1396) add leftZeroFill(4) to GGGG and gggg formats
+  * [#1373](https://github.com/moment/moment/issues/1373) use lowercase for months and days in Catalan
+
+* testing
+  * [#1374](https://github.com/moment/moment/issues/1374) run tests on multiple browser/os combos via SauceLabs and Travis
+
+### 2.5.0 [See changelog](https://gist.github.com/ichernev/8104451)
+
+- Release Dec 24, 2013
+
+* New languages
+  * Luxemburish (lb) [1247](https://github.com/moment/moment/issues/1247)
+  * Serbian (rs) [1319](https://github.com/moment/moment/issues/1319)
+  * Tamil (ta) [1324](https://github.com/moment/moment/issues/1324)
+  * Macedonian (mk) [1337](https://github.com/moment/moment/issues/1337)
+
+* Features
+  * [1311](https://github.com/moment/moment/issues/1311) Add quarter getter and format token `Q`
+  * [1303](https://github.com/moment/moment/issues/1303) strict parsing now respects number of digits per token (fix [1196](https://github.com/moment/moment/issues/1196))
+  * 0d30bb7 add jspm support
+  * [1347](https://github.com/moment/moment/issues/1347) improve zone parsing
+  * [1362](https://github.com/moment/moment/issues/1362) support merideam parsing in Korean
+
+* 22 bugfixes
+
+### 2.4.0
+
+- Release Oct 27, 2013
+
+* **Deprecate** globally exported moment, will be removed in next major
+* New languages
+  * Farose (fo) [#1206](https://github.com/moment/moment/issues/1206)
+  * Tagalog/Filipino (tl-ph) [#1197](https://github.com/moment/moment/issues/1197)
+  * Welsh (cy) [#1215](https://github.com/moment/moment/issues/1215)
+* Bugfixes
+  * properly handle Z at the end of iso RegExp [#1187](https://github.com/moment/moment/issues/1187)
+  * chinese meridian time improvements [#1076](https://github.com/moment/moment/issues/1076)
+  * fix language tests [#1177](https://github.com/moment/moment/issues/1177)
+  * remove some failing tests (that should have never existed :))
+    [#1185](https://github.com/moment/moment/issues/1185)
+    [#1183](https://github.com/moment/moment/issues/1183)
+  * handle russian noun cases in weird cases [#1195](https://github.com/moment/moment/issues/1195)
+
+### 2.3.1
+
+- Release Oct 9, 2013
+
+Removed a trailing comma [1169] and fixed a bug with `months`, `weekdays` getters [#1171](https://github.com/moment/moment/issues/1171).
+
+### 2.3.0 [See changelog](https://gist.github.com/ichernev/6864354)
+
+- Release Oct 7, 2013
+
+Changed isValid, added strict parsing.
+Week tokens parsing.
+
+### 2.2.1
+
+- Release Sep 12, 2013
+
+Fixed bug in string prototype test.
+Updated authors and contributors.
+
+### 2.2.0 [See changelog](https://gist.github.com/ichernev/00f837a9baf46a3565e4)
+
+- Release  Sep 11, 2013
+
+Added bower support.
+
+Language files now use UMD.
+
+Creating moment defaults to current date/month/year.
+
+Added a bundle of moment and all language files.
+
+### 2.1.0 [See changelog](https://gist.github.com/timrwood/b8c2d90d528eddb53ab5)
+
+- Release Jul 8, 2013
+
+Added better week support.
+
+Added ability to set offset with `moment#zone`.
+
+Added ability to set month or weekday from a string.
+
+Added `moment#min` and `moment#max`
+
+### 2.0.0 [See changelog](https://gist.github.com/timrwood/e72f2eef320ed9e37c51)
+
+- Release Feb 9, 2013
+
+Added short form localized tokens.
+
+Added ability to define language a string should be parsed in.
+
+Added support for reversed add/subtract arguments.
+
+Added support for `endOf('week')` and `startOf('week')`.
+
+Fixed the logic for `moment#diff(Moment, 'months')` and `moment#diff(Moment, 'years')`
+
+`moment#diff` now floors instead of rounds.
+
+Normalized `moment#toString`.
+
+Added `isSame`, `isAfter`, and `isBefore` methods.
+
+Added better week support.
+
+Added `moment#toJSON`
+
+Bugfix: Fixed parsing of first century dates
+
+Bugfix: Parsing 10Sep2001 should work as expected
+
+Bugfix: Fixed weirdness with `moment.utc()` parsing.
+
+Changed language ordinal method to return the number + ordinal instead of just the ordinal.
+
+Changed two digit year parsing cutoff to match strptime.
+
+Removed `moment#sod` and `moment#eod` in favor of `moment#startOf` and `moment#endOf`.
+
+Removed `moment.humanizeDuration()` in favor of `moment.duration().humanize()`.
+
+Removed the lang data objects from the top level namespace.
+
+Duplicate `Date` passed to `moment()` instead of referencing it.
+
+### 1.7.2 [See discussion](https://github.com/timrwood/moment/issues/456)
+
+- Release Oct 2, 2012
+
+Bugfixes
+
+### 1.7.1 [See discussion](https://github.com/timrwood/moment/issues/384)
+
+- Release Oct 1, 2012
+
+Bugfixes
+
+### 1.7.0 [See discussion](https://github.com/timrwood/moment/issues/288)
+
+- Release Jul 26, 2012
+
+Added `moment.fn.endOf()` and `moment.fn.startOf()`.
+
+Added validation via `moment.fn.isValid()`.
+
+Made formatting method 3x faster. http://jsperf.com/momentjs-cached-format-functions
+
+Add support for month/weekday callbacks in `moment.fn.format()`
+
+Added instance specific languages.
+
+Added two letter weekday abbreviations with the formatting token `dd`.
+
+Various language updates.
+
+Various bugfixes.
+
+### 1.6.0 [See discussion](https://github.com/timrwood/moment/pull/268)
+
+- Release Apr 26, 2012
+
+Added Durations.
+
+Revamped parser to support parsing non-separated strings (YYYYMMDD vs YYYY-MM-DD).
+
+Added support for millisecond parsing and formatting tokens (S SS SSS)
+
+Added a getter for `moment.lang()`
+
+Various bugfixes.
+
+There are a few things deprecated in the 1.6.0 release.
+
+1. The format tokens `z` and `zz` (timezone abbreviations like EST CST MST etc) will no longer be supported. Due to inconsistent browser support, we are unable to consistently produce this value. See [this issue](https://github.com/timrwood/moment/issues/162) for more background.
+
+2. The method `moment.fn.native` is deprecated in favor of `moment.fn.toDate`. There continue to be issues with Google Closure Compiler throwing errors when using `native`, even in valid instances.
+
+3. The way to customize am/pm strings is being changed. This would only affect you if you created a custom language file. For more information, see [this issue](https://github.com/timrwood/moment/pull/222).
+
+### 1.5.0 [See milestone](https://github.com/timrwood/moment/issues?milestone=10&page=1&state=closed)
+
+- Release Mar 20, 2012
+
+Added UTC mode.
+
+Added automatic ISO8601 parsing.
+
+Various bugfixes.
+
+### 1.4.0 [See milestone](https://github.com/timrwood/moment/issues?milestone=8&state=closed)
+
+- Release Feb 4, 2012
+
+Added `moment.fn.toDate` as a replacement for `moment.fn.native`.
+
+Added `moment.fn.sod` and `moment.fn.eod` to get the start and end of day.
+
+Various bugfixes.
+
+### 1.3.0 [See milestone](https://github.com/timrwood/moment/issues?milestone=7&state=closed)
+
+- Release Jan 5, 2012
+
+Added support for parsing month names in the current language.
+
+Added escape blocks for parsing tokens.
+
+Added `moment.fn.calendar` to format strings like 'Today 2:30 PM', 'Tomorrow 1:25 AM', and 'Last Sunday 4:30 AM'.
+
+Added `moment.fn.day` as a setter.
+
+Various bugfixes
+
+### 1.2.0 [See milestone](https://github.com/timrwood/moment/issues?milestone=4&state=closed)
+
+- Release Dec 7, 2011
+
+Added timezones to parser and formatter.
+
+Added `moment.fn.isDST`.
+
+Added `moment.fn.zone` to get the timezone offset in minutes.
+
+### 1.1.2 [See milestone](https://github.com/timrwood/moment/issues?milestone=6&state=closed)
+
+- Release Nov 18, 2011
+
+Various bugfixes
+
+### 1.1.1 [See milestone](https://github.com/timrwood/moment/issues?milestone=5&state=closed)
+
+- Release Nov 12, 2011
+
+Added time specific diffs (months, days, hours, etc)
+
+### 1.1.0
+
+- Release Oct 28, 2011
+
+Added `moment.fn.format` localized masks. 'L LL LLL LLLL' [issue 29](https://github.com/timrwood/moment/pull/29)
+
+Fixed [issue 31](https://github.com/timrwood/moment/pull/31).
+
+### 1.0.1
+
+- Release Oct 18, 2011
+
+Added `moment.version` to get the current version.
+
+Removed `window !== undefined` when checking if module exists to support browserify. [issue 25](https://github.com/timrwood/moment/pull/25)
+
+### 1.0.0
+
+- Release
+
+Added convenience methods for getting and setting date parts.
+
+Added better support for `moment.add()`.
+
+Added better lang support in NodeJS.
+
+Renamed library from underscore.date to Moment.js
+
+### 0.6.1
+
+- Release Oct 12, 2011
+
+Added Portuguese, Italian, and French language support
+
+### 0.6.0
+
+- Release Sep 21, 2011
+
+Added _date.lang() support.
+Added support for passing multiple formats to try to parse a date. _date("07-10-1986", ["MM-DD-YYYY", "YYYY-MM-DD"]);
+Made parse from string and single format 25% faster.
+
+### 0.5.2
+
+- Release Jul 11, 2011
+
+Bugfix for [issue 8](https://github.com/timrwood/underscore.date/pull/8) and [issue 9](https://github.com/timrwood/underscore.date/pull/9).
+
+### 0.5.1
+
+- Release Jun 17, 2011
+
+Bugfix for [issue 5](https://github.com/timrwood/underscore.date/pull/5).
+
+### 0.5.0
+
+- Release Jun 13, 2011
+
+Dropped the redundant `_date.date()` in favor of `_date()`.
+Removed `_date.now()`, as it is a duplicate of `_date()` with no parameters.
+Removed `_date.isLeapYear(yearNumber)`. Use `_date([yearNumber]).isLeapYear()` instead.
+Exposed customization options through the `_date.relativeTime`, `_date.weekdays`, `_date.weekdaysShort`, `_date.months`, `_date.monthsShort`, and `_date.ordinal` variables instead of the `_date.customize()` function.
+
+### 0.4.1
+
+- Release May 9, 2011
+
+Added date input formats for input strings.
+
+### 0.4.0
+
+- Release May 9, 2011
+
+Added underscore.date to npm. Removed dependencies on underscore.
+
+### 0.3.2
+
+- Release Apr 9, 2011
+
+Added `'z'` and `'zz'` to `_.date().format()`. Cleaned up some redundant code to trim off some bytes.
+
+### 0.3.1
+
+- Release Mar 25, 2011
+
+Cleaned up the namespace. Moved all date manipulation and display functions to the _.date() object.
+
+### 0.3.0
+
+- Release Mar 25, 2011
+
+Switched to the Underscore methodology of not mucking with the native objects' prototypes.
+Made chaining possible.
+
+### 0.2.1
+
+- Release
+
+Changed date names to be a more pseudo standardized 'dddd, MMMM Do YYYY, h:mm:ss a'.
+Added `Date.prototype` functions `add`, `subtract`, `isdst`, and `isleapyear`.
+
+### 0.2.0
+
+- Release
+
+Changed function names to be more concise.
+Changed date format from php date format to custom format.
+
+### 0.1.0
+
+- Release
+
+Initial release
+
